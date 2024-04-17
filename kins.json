@@ -1,0 +1,186 @@
+[
+  {
+    "id": "62b8eed8-8df1-42d0-9974-7efd89f6992e",
+    "name": "kinlcabeta",
+    "description": "An experimental kin",
+    "tags": ["Science", "Beta"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "c2b6f0f2-dc8f-412d-a936-c0c1e87d7134",
+    "name": "kinredacteurscientifique",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "d2b217f9-ca0a-4b58-a08e-7c7d55fdf252",
+    "name": "kincommunitymanager",
+    "description": "An experimental kin",
+    "tags": ["Tool"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "fd0a2424-086a-4e60-9a45-c80ac18c0a42",
+    "name": "kinanalysecontexte",
+    "description": "An experimental kin",
+    "tags": ["Tool"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "9d6d4f62-f31e-4ce0-a8cd-8a83bd10dd55",
+    "name": "kinchercheur",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": false
+  },
+  {
+    "id": "d0a171f5-f6d9-4f17-a161-d12a9d087d35",
+    "name": "kinontologiedomaine",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "ee75f94d-ab8d-4a88-af99-154c9ad46556",
+    "name": "kintranscriptionexcel",
+    "description": "An experimental kin",
+    "tags": ["Tool"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "b8c74921-7942-41ff-980c-812ce128d991",
+    "name": "kinfichekin",
+    "description": "An experimental kin",
+    "tags": ["Tool"],
+    "languages": [],
+    "activated": false
+  },
+  {
+    "id": "2236107d-f4ae-4c75-a3da-c4ca951a47e5",
+    "name": "kinfichekinbeta",
+    "description": "An experimental kin",
+    "tags": ["Tool", "Beta"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "5ba78bf5-b463-4bac-b1cd-7a3991cab11c",
+    "name": "kindocdev",
+    "description": "An experimental kin",
+    "tags": ["Tool"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "d8d25af5-8ece-42df-b937-6d753676d861",
+    "name": "kinmanager",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": ["Rust"],
+    "activated": true
+  },
+  {
+    "id": "e71a0d61-ff28-4b9b-ad14-0c7a62690ef3",
+    "name": "kinmatcheur",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": ["Rust"],
+    "activated": true
+  },
+  {
+    "id": "02bceca6-69b2-4ed9-b791-15d84a0b390a",
+    "name": "kindev",
+    "description": "An experimental kin",
+    "tags": ["Tool"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "9385b4c0-a290-4298-86a7-4ba7cdd78cbc",
+    "name": "kinrsi",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "d4284b2e-b946-4d6d-a424-987498feefd7",
+    "name": "kinontologie",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "5ef04388-796f-4a48-9635-00b8d88908f2",
+    "name": "kinpo",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "d1764086-694d-404b-a7e0-90892b00c6a3",
+    "name": "kinarchitecte",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "56faaef3-4cca-4810-8006-5b5bd35749e7",
+    "name": "kinmissionouverte",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "a27529fc-cf8d-44fb-9da8-804c8746478b",
+    "name": "kinsota",
+    "description": "An experimental kin",
+    "tags": ["Science"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "7742e14d-0767-4542-93b0-8d8a889f4d8a",
+    "name": "kinrevuedelitterature",
+    "description": "An experimental kin",
+    "tags": ["Tool"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "a45528ab-9fbf-453a-9979-54a3ce130792",
+    "name": "kinlca",
+    "description": "An experimental kin",
+    "tags": ["Science"],
+    "languages": [],
+    "activated": true
+  },
+  {
+    "id": "5955d361-fd0b-44c3-8f13-b625c1b43b0f",
+    "name": "CooKin",
+    "description": "What can you cook today, in your city ?",
+    "tags": ["Cuisine"],
+    "languages": ["Python"],
+    "activated": true
+  },
+  {
+    "id": "d91d0317-0ac1-48eb-ba40-28e4ac6749c3",
+    "name": "kinappelprojet",
+    "description": "An experimental kin",
+    "tags": [],
+    "languages": [],
+    "activated": true
+  }
+]
