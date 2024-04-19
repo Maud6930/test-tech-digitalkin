@@ -26,7 +26,7 @@ function KinList() {
        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {kins.map(kin => (
           <div key={kin.id} className="bg-white p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
-            <h3 className="text-lg font-semibold">{kin.name}</h3>
+            <h3 className="text-gray-600">{kin.name}</h3>
             <p className="text-gray-600">{kin.description}</p>
             <p className="text-gray-500">Tags: {JSON.stringify(kin.tags)}</p>
             <p className="text-gray-500">Languages: {JSON.stringify(kin.languages)}</p>
