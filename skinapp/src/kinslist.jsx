@@ -23,23 +23,29 @@ function KinList() {
 
   return (
     <div>
-      <ul>
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {kins.map(kin => (
-          <li key={kin.id}>
-            {kin.name} - {kin.description} - {JSON.stringify(kin.tags)} - {JSON.stringify(kin.languages)} - {String(kin.activated)}
-            <button onClick={() => removeKin(kin.id)}>Supprimer</button>
-          </li>
+          <div key={kin.id} className="bg-white p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+            <h3 className="text-lg font-semibold">{kin.name}</h3>
+            <p className="text-gray-600">{kin.description}</p>
+            <p className="text-gray-500">Tags: {JSON.stringify(kin.tags)}</p>
+            <p className="text-gray-500">Languages: {JSON.stringify(kin.languages)}</p>
+            <p className="text-sm text-gray-700">Activated: {String(kin.activated)}</p>
+            <button className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-700 transition duration-300"
+              onClick={() => removeKin(kin.id)}>Supprimer</button>
+            </div>
         ))}
-      </ul>
-      <div>
-        <input type="text" name="name" value={nouvKin.name} onChange={handleChange} placeholder="Name" />
-        <input type="text" name="description" value={nouvKin.description} onChange={handleChange} placeholder="Description" />
-        <input type="text" name="tags" value={nouvKin.tags} onChange={handleChange} placeholder="Tags" />
-        <input type="text" name="languages" value={nouvKin.languages} onChange={handleChange} placeholder="Languages" />
-        <input type="checkbox"  id="activatedCheckbox" name="activated"checked={nouvKin.activated} onChange={handleChange} placeholder="Activated"
-        />
-         <label htmlFor="activatedCheckbox">Cliquez sur la checkbox pour activer</label>
-        <button onClick={handleAddKin}>Ajouter Kin</button>
+        </div>
+        <div className="mt-8">
+        <input type="text" name="name" value={nouvKin.name} onChange={handleChange} placeholder="Name" className="input input-bordered" />
+        <input type="text" name="description" value={nouvKin.description} onChange={handleChange} placeholder="Description" className="input input-bordered" />
+        <input type="text" name="tags" value={nouvKin.tags} onChange={handleChange} placeholder="Tags" className="input input-bordered" />
+        <input type="text" name="languages" value={nouvKin.languages} onChange={handleChange} placeholder="Languages" className="input input-bordered" />
+        <div className="flex items-center mt-4">
+          <input type="checkbox" id="activatedCheckbox" name="activated" checked={nouvKin.activated} onChange={handleChange} className="checkbox checkbox-primary" />
+          <label htmlFor="activatedCheckbox" className="ml-2">Cliquez sur la checkbox pour activer</label>
+        </div>
+        <button onClick={handleAddKin} className="btn btn-primary mt-4">Ajouter Kin</button>
       </div>
     </div>
   );
