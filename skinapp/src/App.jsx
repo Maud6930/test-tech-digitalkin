@@ -11,7 +11,7 @@ function App() {
         <h1>Liste des kins</h1>
         <Kinslist /> 
       </div>
-      
+      /* kinslist = composant permettant l'affichage de la liste*/
   )
 }
 
