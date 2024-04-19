@@ -13,6 +13,9 @@ function App() {
         span.textContent = char;
         span.className = 'letter';
         span.style.animationDelay = `${index * 0.1}s`;
+        if (char === ' ') {
+          span.innerHTML = '&nbsp;';
+        }
         return span;
       });
       title.current.innerHTML = ''; 
