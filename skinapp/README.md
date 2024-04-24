@@ -1,8 +1,6 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+points d'amélioration : 
+-enlever les crochets sur l'interface
+-enlever les carrés présent quand il n'y a pas les infos (ex : langues etc)
+- BONUS
+- faire une page d'acceuil avec un menu "voir la liste" avec option suppression et mettre le formulaire d'ajout dans une autre page 
+- rendre la page accessible à l'aide du RGAA

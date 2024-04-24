@@ -14,18 +14,21 @@ function KinList() {
   };
      
   const handleChange = (e) => {
-    const { name, type, checked, value } = e.target; //e.target = ref à l'élément DOM qui déclenche le formulaire
-    setNouvKin(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
+    const { name, type, checked, value } = e.target; //e.target = ref à l'élément DOM (formulaire) qui déclenche onChange
+    setNouvKin(prev => ({ // SetNouKin met à jour l'état des nouvelles valeurs du formulaire / Prev met à jour en se basant sur l'état le plus récent évite erreur de synchr
+      ...prev,//opérateur de décomposition pour copier toutes les propriétés existantes de l'état précédent 
+      [name]: type === 'checkbox' ? checked : value //gère différence entre champs textuels et checkboxes -> Si le type de l'élément est 'checkbox'=  mise à jour avec la valeur checked sinon value
     }));
   };
 
   return (
     <div>
-       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {kins.map(kin => (
+       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"> 
+       {/* rend l'affichage des cartes responsive */}
+        {kins.map(kin =>( // transformation de la liste de données kins en élément JSX
           <div key={kin.id} className="bg-white p-4 rounded-lg shadow-lg transform transition duration-300 hover:scale-105">
+            {/* chaque kin est affiché dans une carte individuelle "div" + affichage de chaque info correspondantes
+            genère une clé unique spécificité de React pour une gestion de la liste*/}
             <h3 className="text-2xl font-extrabold text-neutral-400">{kin.name}</h3>
             <p className="text-gray-600">{kin.description}</p>
             <p className="text-gray-500 italic">Tags: {JSON.stringify(kin.tags)}</p>
