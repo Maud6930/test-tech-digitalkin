@@ -1,10 +1,13 @@
 import React, { useEffect, useRef,useState } from 'react';
 import './App.css'
+import useStore from './storekins';
+import { searchKins } from './search';
 import Kinslist from './kinslist'
 
 function App() {
   const title = useRef(null); //permet d'accéder à l'élément <h1> dans le DOM
-  const [searchTerm, setSearchTerm] = useState(''); 
+  const kins = useStore(state => state.kins);
+  const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => { //animation pour le titre appelé avec une fonction callback et tableau vide pour s'executer 1 fois au chargement de la page
     if (title.current) { // verifie l'élément h1 et la nomnation title 
@@ -25,22 +28,25 @@ function App() {
       });
     }
   }, []);
-
+  const filteredKins = searchKins(kins, searchTerm);//utilisé pour afficher les resultats de la recherche
 
   return (
-      <div>
-        <h1 className="text-3xl font-bold underline" ref={title}></h1> 
-        {/* h1 est vide avec ref {title} afin de rajouter les span au dessus */}
-        <input
-        type="text"
-        placeholder="Rechercher un kin..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}  
-        className="search-input" 
+    <div>
+    <h1 className="text-3xl font-bold" ref={title}></h1>
+    <input
+      type="text"
+      placeholder="Rechercher un kin..."
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)} // se met à jour 
+      className="search-input text-black"
       />
-        <Kinslist /> 
-      </div>
-      /* kinslist = composant permettant l'affichage de la liste*/
+      <div>
+      <button onClick={() => searchKins(kins, searchTerm)} className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300">Recherche</button>
+</div>
+    <Kinslist kins={filteredKins} /> 
+  </div>
+  // l'événement ne fonctionne pas 
+  /* kinslist = composant permettant l'affichage de la liste*/
   )
 }
 

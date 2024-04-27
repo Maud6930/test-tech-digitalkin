@@ -4,3 +4,4 @@ points d'amélioration :
 - BONUS
 - faire une page d'acceuil avec un menu "voir la liste" avec option suppression et mettre le formulaire d'ajout dans une autre page 
 - rendre la page accessible à l'aide du RGAA
+- Image d'illustration

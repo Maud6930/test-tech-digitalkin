@@ -40,10 +40,10 @@ function KinList() {
         ))}
         </div>
         <div className="mt-8">
-        <input type="text" name="name" value={nouvKin.name} onChange={handleChange} placeholder="Name" className="input input-bordered" />
-        <input type="text" name="description" value={nouvKin.description} onChange={handleChange} placeholder="Description" className="input input-bordered" />
-        <input type="text" name="tags" value={nouvKin.tags} onChange={handleChange} placeholder="Tags" className="input input-bordered" />
-        <input type="text" name="languages" value={nouvKin.languages} onChange={handleChange} placeholder="Languages" className="input input-bordered" />
+        <input type="text" name="name" value={nouvKin.name} onChange={handleChange} placeholder="Name" className="input input-bordered text-black" />
+        <input type="text" name="description" value={nouvKin.description} onChange={handleChange} placeholder="Description" className="input input-bordered text-black" />
+        <input type="text" name="tags" value={nouvKin.tags} onChange={handleChange} placeholder="Tags" className="input input-bordered text-black" />
+        <input type="text" name="languages" value={nouvKin.languages} onChange={handleChange} placeholder="Languages" className="input input-bordered text-black" />
         <div className="flex items-center mt-4">
           <input type="checkbox" id="activatedCheckbox" name="activated" checked={nouvKin.activated} onChange={handleChange} className="checkbox checkbox-primary" />
           <label htmlFor="activatedCheckbox" className="ml-2">Cliquez sur la checkbox pour activer</label>
