@@ -20,6 +20,8 @@ function KinList() {
       [name]: type === 'checkbox' ? checked : value //gère différence entre champs textuels et checkboxes -> Si le type de l'élément est 'checkbox'=  mise à jour avec la valeur checked sinon value
     }));
   };
+  const arrayToHashtags = (array) => array.map(item => `#${item}`).join(' '); //amélioration de l'affichage des tags 
+  const arrayToString = (array) => array.join(', ');//amélioation de l'affichage des language
 
   return (
     <div>
@@ -31,8 +33,8 @@ function KinList() {
             genère une clé unique spécificité de React pour une gestion de la liste*/}
             <h3 className="text-2xl font-extrabold text-neutral-400">{kin.name}</h3>
             <p className="text-gray-600">{kin.description}</p>
-            <p className="text-gray-500 italic">Tags: {JSON.stringify(kin.tags)}</p>
-            <p className="text-gray-500 italic">Languages: {JSON.stringify(kin.languages)}</p>
+            {kin.tags.length > 0 && <p className="text-gray-500 italic">Tags: {arrayToHashtags(kin.tags)}</p>}
+            {kin.languages.length > 0 && <p className="text-gray-500 italic">Languages: {arrayToString(kin.languages)}</p>}
             <p className="text-sm text-gray-700 font-semibold italic">Activated: {String(kin.activated)}</p>
             <button className="mt-4 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-700 transition duration-300"
               onClick={() => removeKin(kin.id)}>Supprimer</button>
