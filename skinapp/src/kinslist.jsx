@@ -15,11 +15,20 @@ function KinList() {
      
   const handleChange = (e) => {
     const { name, type, checked, value } = e.target; //e.target = ref à l'élément DOM (formulaire) qui déclenche onChange
+    if (name === "tags" || name === "languages") {
+      // Convertir la chaîne de caractères en tableau 
+      const arrayValue = value.split(',').map(item => item.trim());
+      setNouvKin(prev => ({
+        ...prev,
+        [name]: arrayValue
+      }));
+    } else {
     setNouvKin(prev => ({ // SetNouKin met à jour l'état des nouvelles valeurs du formulaire / Prev met à jour en se basant sur l'état le plus récent évite erreur de synchr
       ...prev,//opérateur de décomposition pour copier toutes les propriétés existantes de l'état précédent 
       [name]: type === 'checkbox' ? checked : value //gère différence entre champs textuels et checkboxes -> Si le type de l'élément est 'checkbox'=  mise à jour avec la valeur checked sinon value
     }));
   };
+}
   const arrayToHashtags = (array) => array.map(item => `#${item}`).join(' '); //amélioration de l'affichage des tags 
   const arrayToString = (array) => array.join(', ');//amélioation de l'affichage des language
 
@@ -41,19 +50,32 @@ function KinList() {
             </div>
         ))}
         </div>
-        <div className="mt-8">
-        <input type="text" name="name" value={nouvKin.name} onChange={handleChange} placeholder="Name" className="input input-bordered text-black" />
-        <input type="text" name="description" value={nouvKin.description} onChange={handleChange} placeholder="Description" className="input input-bordered text-black" />
-        <input type="text" name="tags" value={nouvKin.tags} onChange={handleChange} placeholder="Tags" className="input input-bordered text-black" />
-        <input type="text" name="languages" value={nouvKin.languages} onChange={handleChange} placeholder="Languages" className="input input-bordered text-black" />
+        <div className="mt-8 bg-white p-4 rounded-lg shadow-lg">
+        <h2 className="text-xl font-bold text-gray-600 mb-4">Ajouter un nouveau Kin</h2>
+        <form className="space-y-4"></form>
+        <input type="text" name="name" value={nouvKin.name} onChange={handleChange} placeholder="Name" className="input input-bordered w-full text-black" />
+        <input type="text" name="description" value={nouvKin.description} onChange={handleChange} placeholder="Description" className="input input-bordered w-full text-black" />
+        <input type="text" name="tags" value={nouvKin.tags.join(',')} onChange={handleChange} placeholder="Tags" className="input input-bordered w-full text-black" />
+        <input type="text" name="languages" value={nouvKin.languages.join(',')} onChange={handleChange} placeholder="Languages" className="input input-bordered w-full text-black" />
         <div className="flex items-center mt-4">
-          <input type="checkbox" id="activatedCheckbox" name="activated" checked={nouvKin.activated} onChange={handleChange} className="checkbox checkbox-primary" />
-          <label htmlFor="activatedCheckbox" className="ml-2">Cliquez sur la checkbox pour activer</label>
+          <label className="flex items-center space-x-3">
+            <input
+              type="checkbox"
+              id="activatedCheckbox"
+              name="activated"
+              checked={nouvKin.activated}
+              onChange={handleChange}
+              className="checkbox checkbox-primary"
+            />
+            <span>Cliquer pour activer</span>
+          </label>
         </div>
+        {/* formulaire pour rajouter un kin */}
         <button onClick={handleAddKin} className="mt-4 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-700 transition duration-300">Ajouter Kin</button>
       </div>
     </div>
   );
 }
+
 
 export default KinList;

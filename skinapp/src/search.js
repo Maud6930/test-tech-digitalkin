@@ -11,4 +11,4 @@ export function searchKins(kins, searchTerm) {
              kin.description.toLowerCase().includes(searchTerm.toLowerCase());
     });
   }
-  
+  //code à revoir, barre de recherche ne fonctionne pas 
